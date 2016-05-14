@@ -1,0 +1,10 @@
+<h1><%= product['name'] %></h2>
+<%= image_tage @product['image_thumb_url'] %>
+
+<dl>
+	<dt>Price</dt>
+	<dd><%= number_to_currency(@product['price_in_cents'].to_f /100) %>
+
+	<dt>Alcohol Content</dt>
+	<dd><%= @product['alcohol_content'].to_f / 100 %>%</dd>
+</dl>
